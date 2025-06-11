@@ -184,8 +184,13 @@
         compatible = "zmk,combos";
 
         TABkey {
-            bindings = <&kt TAB>;
+            bindings = <&kp TAB>;
             key-positions = <13 14>;
+        };
+
+        tab2 {
+            bindings = <&kp LS(TAB)>;
+            key-positions = <15 16>;
         };
     };
 
@@ -200,7 +205,7 @@
 &kp Q             &kp W         &kp E         &kp R      &kp T                &kp T                          &kp Y                        &kp Y          &kp U            &kp I       &kp O     &kp P
 &kp A             &kp S         &kp D         &kp F      &kp G                &kp G                          &kp H                        &kp H          &kp J            &kp K       &kp L     &kp SEMI
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B                &kp B                          &kp N                        &kp N          &kp M            &kp COMMA   &kp DOT   &kp LS(INTERNATIONAL_1)
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE  &mo SECONDARY_LAYER  &lt TERTIARY_LAYER LANGUAGE_1  &lt SYSTEM_LAYER LANGUAGE_2  &kp BACKSPACE  &kp RET          &kp LEFT    &kp DOWN  &kp RIGHT
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp SPACE  &mo SECONDARY_LAYER  &lt TERTIARY_LAYER LANGUAGE_1  &lt SYSTEM_LAYER LANGUAGE_2  &kp BACKSPACE  &kp RET          &kp LEFT    &kp DOWN  &kp DELETE
                                 &kp RIGHT     &kp DOWN   &kp LEFT_ARROW       &kp UP_ARROW                   &allow_pageup                &allow_home    &allow_pagedown  &allow_end
             >;
         };
@@ -210,11 +215,11 @@
             sensor-bindings = <&scroll_left_right>, <&scroll_left_right>;
 
             bindings = <
-&kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp PAGE_UP    &kp PRINTSCREEN  &kp KP_SLASH     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
-&trans   &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp HOME       &kp END          &kp KP_ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6
-&trans   &trans        &trans        &trans        &trans        &trans        &kp PAGE_DOWN  &kp KP_MINUS     &kp KP_PLUS      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3
-&trans   &trans        &trans        &trans        &trans        &kp CAPS      &trans         &kp DELETE       &trans           &kp KP_NUMBER_0  &dot_comma       &kp KP_ENTER
-                       &trans        &trans        &trans        &trans        &trans         &trans           &trans           &trans
+&kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp PAGE_UP    &kp LS(KP_PLUS)  &kp N7  &kp N8           &kp N9      &kp LS(MINUS)
+&trans   &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &kp HOME       &kp LS(APOS)     &kp N4  &kp N5           &kp N6      &kp SLASH
+&trans   &trans        &trans        &trans        &trans        &trans        &kp PAGE_DOWN  &kp N0           &kp N1  &kp N2           &kp N3      &kp LS(NUMBER_6)
+&trans   &trans        &trans        &trans        &trans        &kp CAPS      &trans         &kp DELETE       &trans  &kp KP_NUMBER_0  &dot_comma  &kp LS(SLASH)
+                       &trans        &trans        &trans        &trans        &trans         &trans           &trans  &trans
             >;
         };
 
