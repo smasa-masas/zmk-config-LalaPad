@@ -198,8 +198,12 @@
         Visiblcell: Visiblcell {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ALT &kp SEMI>;
-            label = "VISIBLCELL";
+        bindings = <
+            &mm PRESS LEFT_ALT
+            &kp SEMI
+            &mm RELEASE LEFT_ALT
+        >;
+        label = "VISIBLCELL";
         };
     };
 
