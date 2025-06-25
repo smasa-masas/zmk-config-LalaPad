@@ -194,6 +194,15 @@
         };
     };
 
+    macros {
+        Visiblcell: Visiblcell {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_ALT &kp SEMI>;
+            label = "VISIBLCELL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -202,7 +211,7 @@
             sensor-bindings = <&scroll_down_up>, <&scroll_up_down>;
 
             bindings = <
-&kp Q             &kp W         &kp E         &kp R        &kp T             &kp T                          &kp Y                        &kp Y                      &kp U            &kp I             &kp O         &kp P
+&kp Q             &kp W         &kp E         &kp R        &kp T             &Visiblcell                    &kp Y                        &kp Y                      &kp U            &kp I             &kp O         &kp P
 &kp A             &kp S         &kp D         &kp F        &kp G             &kp LS(LG(S))                  &kp H                        &kp H                      &kp J            &kp K             &kp L         &kp APOS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V        &kp B             &mt LEFT_SHIFT TAB             &kp N                        &kp N                      &kp M            &kp COMMA         &kp DOT       &kp LS(INTERNATIONAL_1)
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 SPACE  &lt 2 LANGUAGE_1  &lt TERTIARY_LAYER LANGUAGE_2  &lt SYSTEM_LAYER LANGUAGE_2  &mt2 LANGUAGE_2 BACKSPACE  &lt 1 RET        &kp LS(NUMBER_6)  &kp QUESTION  &kp DELETE
